@@ -9,7 +9,7 @@ int main() {
     cin>>b;
     int temp=a;
     a = b;
-    c=temp;
+    b=temp;
     cout<<"The value of a after swap = "<<a<<endl;
     cout<<"The value of b after swap = "<<b;
     return 0;
