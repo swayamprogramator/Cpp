@@ -8,7 +8,7 @@ int main() {
     cout<<"Enter the value of b = ";
     cin>>b;
     int temp=a;
-    a = c;
+    a = b;
     c=temp;
     cout<<"The value of a after swap = "<<a<<endl;
     cout<<"The value of b after swap = "<<b;
