@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+class work{
+    private:
+        int num1 , num2 ;
+    public:
+        work(int num1,int num2 ){
+            this ->num1 = num1;
+            this ->num2 = num2;
+        }
+        int Add(){
+            int sum;
+            sum=num1+num2;
+            return sum;
+        }
+        int swap();
+        void comp(){
+            (num1>num2)?cout << num1 <<" is larger."<< endl:cout << num2 <<" is larger."<< endl;
+        }
+        void evenodd();
+        
+        int simp(){
+            int p , r , t ,si;
+            cout <<"Enter p , r ,t : ";
+            cin >> p >> r >> t;
+            si = (p*r*t)/100;
+            return si;
+        }
+};
+int work::swap(){
+    int temp;
+    cout << "The Numbers before swapping" << num1 << num2 << endl;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+    cout << "The Numbers before swapping";
+    return num1 , num2;
+}
+void work::evenodd(){
+    (num1%2==0)?cout << num1 <<" is even."<< endl:cout << num1<< " is odd."<< endl;
+    (num2%2==0)?cout << num2 <<" is even."<< endl:cout << num2 << " is odd." <<endl;
+}
+int main() {
+    int a , b;
+    cout << "Enter the first number : ";
+    cin >> a;
+    cout << "Enter the second number : ";
+    cin >>b;
+    work w(a,b);
+    cout << w.simp()<<endl;
+    w.comp();
+
+    return 0;
+}
+
