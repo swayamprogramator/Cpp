@@ -15,7 +15,7 @@ void bubble(int arr[],int n){
 int main(){
     int n;
     printf("Enter no. of element you want:");
-    scanf("%d",&n);
+    cin>>n;
     int arr[n];
     printf("Enter Element:\n");
     for (int i=0;i<n;i++){
