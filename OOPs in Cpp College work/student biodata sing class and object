@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Student {
+public:
+
+    Student(string n, int a, int g, string add) {
+        name = n;
+        age = a;
+        grade = g;
+        address = add;
+    }
+
+    void display_bio_data() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Grade: " << grade << endl;
+        cout << "Address: " << address << endl << endl;
+    }
+
+private:
+    string name;
+    int age;
+    int grade;
+    string address;
+};
+
+int main() {
+    
+    Student student1("Aarav Sharma", 17, 12, "23, Patel Nagar, New Delhi");
+    Student student2("Priya Patel", 16, 11, "56, Gandhi Road, Mumbai");
+    Student student3("Vivek Singh", 18, 12, "11, Rajpur Road, Bangalore");
+    
+    cout << "Bio-data of Student 1:" << endl;
+    student1.display_bio_data();
+
+    cout << "Bio-data of Student 2:" << endl;
+    student2.display_bio_data();
+
+    cout << "Bio-data of Student 3:" << endl;
+    student3.display_bio_data();
+
+    return 0;
+}
