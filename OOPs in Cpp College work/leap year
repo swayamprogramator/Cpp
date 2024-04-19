@@ -1,0 +1,28 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+ class leap{
+        int year;
+        public:
+        leap(int y){
+            year=y;
+        }
+        void leap_year(){
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                cout << year << " is a leap year.";
+            }
+             else {
+                 cout << year << " is not a leap year.";
+            }
+        }
+};
+int main() {
+    int y;
+    cout<<"Enter year:";
+    cin>>y;
+    leap obj(y);
+    obj.leap_year();
+    return 0;
+}
+   
+
