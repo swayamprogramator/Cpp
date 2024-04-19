@@ -1,0 +1,48 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#define M_PI 3.14;
+using namespace std;
+double area(double radius) {
+    return (22 * radius * radius)/7; 
+}
+
+// Function to calculate the area of a rectangle
+double area(double length, double width) {
+    return length * width;
+}
+
+// Function to calculate the area of a triangle
+float area(float base, float height) {
+    return 0.5 * base * height;
+}
+
+int main() {
+    double r,l,w;
+    float b,h;
+    int ch;
+    cout<<"1. Area of Circle"<<endl;
+    cout<<"2. Area of Reactangle"<<endl;
+    cout<<"3. Area of Triangle"<<endl;
+    cout<<"Enter your choice:";
+    cin>>ch;
+    switch (ch){
+        case 1:
+            cout << "Enter the radius of the circle: ";
+            cin >> r;
+            cout << "Area of the circle: " << area(r) << endl;
+            break;
+        case 2:
+            cout << "Enter the length and width of the rectangle: ";
+            cin >> l >> w;
+            cout << "Area of the rectangle: " << area(l, w) << endl;
+            break;
+        case 3:
+            cout << "Enter the base and height of the triangle: ";
+            cin >> b >> h;
+            cout << "Area of the triang.le: " << area(b, h) << endl;
+            break;
+        default:
+            cout<<"Invalid input.";
+    }
+    return 0;
+}
