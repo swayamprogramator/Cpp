@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class complex{
+    int real;
+    int img;
+    public:
+    complex(int x, int y){
+        real=x;
+        img=y;
+    }
+    complex operator+ (complex &c){
+        complex ans(0,0);
+        ans.real=real+c.real;
+        ans.img=img+c.img;
+        cout<<ans.real<<" + i"<<ans.img;
+        return ans;
+    }
+
+};
+int main(){
+int x1,x2;
+int y1,y2;
+cout<<"Enter real and then imaginary part of 1st complex:";
+cin>>x1>>y1;
+cout<<"Enter real and then imaginary part of 2nd complex:";
+cin>>x2>>y2;
+complex c1(x1,y1);
+complex c2(x2,y2);
+complex c3=c1+c2;
+}
