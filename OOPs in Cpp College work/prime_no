@@ -1,0 +1,42 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<math.h>
+using namespace std;
+class prime{
+    int number;
+public:
+    prime(int n){
+        number=n;
+    }    
+    void prime_num(){
+        int result=1;
+        int num=sqrt(number)+1;
+        if(number==0 || number==1){
+            cout<<"Prime number not define for 0 and 1";
+        }
+        else{
+            for(int i=2;i<=num;i++){
+                if(number%i==0){
+                    result=0;
+                    break;
+               }
+            }
+        }
+        if(result==1){
+            cout<<"Prime Number";
+        }
+        else{
+            cout<<"Non Prime Number";
+        }
+    
+    }
+    
+};
+int main() {
+    int num;
+    cout<<"Enter number:";
+    cin>>num;
+    prime obj(num);
+    obj.prime_num();
+    return 0;
+}
