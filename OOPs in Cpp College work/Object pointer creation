@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+class my_class{
+    int val;
+    public:
+        void print_square(){
+        char ch='y';
+        while(ch=='y'){
+            int n;
+            cout<<"Enter value:";
+            cin>>n;
+            val=n;
+            cout<<"Square of " <<val<<" is:";
+            cout<<val*val<<endl;
+            cout<<"If you want to continue write 'y' otherwise any character:";
+            cin>>ch;
+        }
+        }
+};
+int main() {
+    my_class *obj=new my_class();
+    obj->print_square();
+    return 0;
+}
