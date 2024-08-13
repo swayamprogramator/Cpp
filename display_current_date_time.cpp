@@ -19,4 +19,6 @@ int main()
               << " " << (time->tm_year + BASE_YEAR);
     std::cout << "\nCurrent time " << std::setw(2) << std::setfill('0')
               << time->tm_hour << " : " << std::setw(2) << std::setfill('0')
-              << time->tm_min << 
+             << time->tm_min << " : " << std::setw(2) << std::setfill('0')
+              << time->tm_sec;   
+}
